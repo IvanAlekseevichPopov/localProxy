@@ -1,0 +1,34 @@
+# This is example of client config. Up to you )
+client
+nobind
+dev tun
+remote-cert-tls server
+
+remote YOUR_VPN_SERVER_HOSTNAME 1194 tcp
+
+<key>
+-----BEGIN PRIVATE KEY-----
+__________________PRIVATE_KEY_HERE
+-----END PRIVATE KEY-----
+</key>
+<cert>
+-----BEGIN CERTIFICATE-----
+__________________CERTIVICATE_HERE
+-----END CERTIFICATE-----
+</cert>
+<ca>
+-----BEGIN CERTIFICATE-----
+__________________CA_CERT_HERE
+-----END CERTIFICATE-----
+</ca>
+key-direction 1
+<tls-auth>
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+__________________STATIC_KEY_HERE_IF_EXIST
+-----END OpenVPN Static key V1-----
+</tls-auth>
+
+redirect-gateway def1
