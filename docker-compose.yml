@@ -3,7 +3,7 @@ version: '3.2'
 services:
     squid:
         build: ./squid
-#       restart: always
+        restart: always
         volumes:
           - ./squid/entrypoint.sh:/entrypoint.sh
           - ./squid/squid.conf:/etc/squid/squid.conf
@@ -14,7 +14,7 @@ services:
 
     vpn:
         build: ./vpn
-#       restart: always
+        restart: always
         volumes:
             - ./vpn/client.ovpn:/client.ovpn
             - ./vpn/routing.sh:/routing.sh
